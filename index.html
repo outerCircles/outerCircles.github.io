@@ -3,56 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatApp</title>
-  <link rel="stylesheet" href="/index.css">
+  <title>Outer Circle</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
   </head>
   <body>
-    <div class="navbar">
-      <input type="text" placeholder="Search">
-    </div>
-    <div class="sidenav">
-      <a href="#" class="zoom">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Kunal Dhawan</p>
-      </a>
-      <div class="Line"></div>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Saved<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <div class="Line"></div>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Hardeep Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Reynaldo JR Sia</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Savinder Kaur</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Satnam Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Sukhjeet Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Naresh Kumar</p>
-      </a>
-      <div class="SystemSetting">
-        <div class="Line"></div>
-        <a href="#" class="zoom">
-          <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Setting</p>
-        </a>
-      </div>  
-    </div>
+    <header>
+      <div class="navbar">
+        <input type="text" placeholder="Search">
+      </div>
+    </header>
+    
+    <main>
+      <div class="sidenav">
+        <header class="zoom">
+          <a href="#" >
+            <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Kunal Dhawan</p>
+          </a>
+        </header>
+        <main>
+          <div>
+            <a href="#">
+              <span class="SideNavIcons">Starred</span>
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <span class="SideNavIcons">Start New</span><span class="material-icons">add_circle</span>
+            </a>
+          </div>
+          
+          <div>
+            <header>Recent Chats</header>
+            <div>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Hardeep Singh</p>
+              </a>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Reynaldo JR Sia</p>
+              </a>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Savinder Kaur</p>
+              </a>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Satnam Singh</p>
+              </a>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Sukhjeet Singh</p>
+              </a>
+              <a href="#">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Naresh Kumar</p>
+              </a>
+            </div>
+          </div>
+        </main>
+        
+        <footer>
+          <div class="SystemSetting">
+            <div class="Line"></div>
+              <a href="#" class="zoom">
+                <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Setting</p>
+              </a>
+            </div>  
+          </div>
+        </footer>
+        
+    </main>
+    
     <div class="bottomBar">
       <a href="#">
         <img src="/img/User.png" alt="Emoji" class="Emoji">
