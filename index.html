@@ -3,62 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatApp</title>
-  <link rel="stylesheet" href="/index.css">
+  <title>Outer Circle</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- Material design icons are use below. Remove this line if using other font packs or images. Details on Material Design icons can be found here: https://material.io/resources/icons/ -->
   </head>
-  <body>
-    <div class="navbar">
-      <input type="text" placeholder="Search">
-    </div>
-    <div class="sidenav">
-      <a href="#" class="zoom">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Kunal Dhawan</p>
-      </a>
-      <div class="Line"></div>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Saved<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <a href="#">
-        <p>Start New<img src="/img/User.png" alt="Start New Chat" class="SideNavIcons"></p>
-      </a>
-      <div class="Line"></div>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Hardeep Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Reynaldo JR Sia</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Savinder Kaur</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Satnam Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Sukhjeet Singh</p>
-      </a>
-      <a href="#">
-        <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Naresh Kumar</p>
-      </a>
-      <div class="SystemSetting">
-        <div class="Line"></div>
-        <a href="#" class="zoom">
-          <p><img src="/img/User.png" alt="Profile Picture" class="UserIcon">Setting</p>
-        </a>
-      </div>  
-    </div>
-    <div class="bottomBar">
-      <a href="#">
-        <img src="/img/User.png" alt="Emoji" class="Emoji">
-      </a>
-      <textarea name="" id="" cols="50" rows="2"></textarea>
-      <img src="/img/User.png" alt="Voice Note" class="Emoji">
-    </div>
+  <body>    
+    <main>
+      <div class="sidenav">
+        <header class="zoom">
+          <a href="#" >
+            <div class="spaced-flex">
+              <span class="material-icons">account_circle</span>
+              <span>Kunal Dhawan</span>
+            </div>  
+          </a>
+        </header>
+        <main class="sidenav-main">
+          <section>
+            <div>
+              <a href="#">
+                <div class="spaced-flex">
+                  <span>Starred</span>
+                  <span class="material-icons">add_circle</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a class="spaced-flex" href="#">
+                <div class="spaced-flex">
+                  <span>Start New</span>
+                  <span class="material-icons">stars</span>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section>
+            <h3>Recent Chats</h3>
+            <div class="conversations-nav">
+              <a href="#">
+                <div class="spaced-flex">
+                  <span class="material-icons">account_circle</span>
+                  <span>Hardeep Singh</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="spaced-flex">
+                  <span class="material-icons">account_circle</span>
+                  <span>Kunal Dhawan</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="spaced-flex">
+                  <span class="material-icons">account_circle</span>
+                  <span>Reynaldo Sia</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="spaced-flex">
+                  <span class="material-icons">account_circle</span>
+                  <span>Jorge William</span>
+                </div>
+              </a>
+              <a href="#">
+                <div class="spaced-flex">
+                  <span class="material-icons">account_circle</span>
+                  <span>Robin Bedford</span>
+                </div>
+              </a>
+            </div>
+          </section>
+        </main>
+        
+        <footer>
+          <div class="SystemSetting">
+            <a href="#" class="zoom">
+              <div class="spaced-flex">
+                <span>Settings</span>
+                <span class="material-icons">settings</span>
+              </div>  
+            </a> 
+          </div>
+        </footer>
+      </div>
+
+      <section class="main-section">
+        <header>
+          <div class="searchbar">
+            <input class="input" type="text" placeholder="Search">
+          </div>
+        </header>
+
+        <main class="chat-section">
+          <div class="chat-box others-chat-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum, laudantium hic dolore fuga a asperiores ducimus iure odio praesentium iste rerum, minima perspiciatis dolores nemo quaerat corporis? Labore, eaque.</p>
+            <span>7:18 pm</span>
+          </div>
+          <div class="chat-box mychat-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum, laudantium hic dolore fuga a asperiores ducimus iure odio praesentium iste rerum, minima perspiciatis dolores nemo quaerat corporis? Labore, eaque.</p>
+            <span>7:18 pm</span>
+          </div>
+          <div class="chat-box others-chat-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum, laudantium hic dolore fuga a asperiores ducimus iure odio praesentium iste rerum, minima perspiciatis dolores nemo quaerat corporis? Labore, eaque.</p>
+            <span>7:18 pm</span>
+          </div>
+          <div class="chat-box mychat-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum, laudantium hic dolore fuga a asperiores ducimus iure odio praesentium iste rerum, minima perspiciatis dolores nemo quaerat corporis? Labore, eaque.</p>
+            <span>7:18 pm</span>
+          </div>
+          <div class="chat-box others-chat-box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cum, laudantium hic dolore fuga a asperiores ducimus iure odio praesentium iste rerum, minima perspiciatis dolores nemo quaerat corporis? Labore, eaque.</p>
+            <span>7:18 pm</span>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <div class="bottomBar">
+            <a href="#">
+              <img src="/img/User.png" alt="Emoji" class="Emoji">
+            </a>
+            <textarea name="" id="" cols="50" rows="2"></textarea>
+            <img src="/img/User.png" alt="Voice Note" class="Emoji">
+          </div>
+        </footer>
+      </div>
+        
+    </main>
+    
+    
+    
   </body>
 </html>
