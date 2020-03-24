@@ -6,7 +6,7 @@ span{
 }
 .searchbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #4d5755;
   position: fixed;
   top: 0;
   left: 18em;
@@ -41,7 +41,7 @@ span{
   z-index: 1;
   top: 0; 
   left: 0;
-  background-color: #111;
+  background-color: #333;
   overflow: hidden;
   padding: 1em;
   box-sizing: border-box;
@@ -50,12 +50,12 @@ span{
   padding: 0 2em;
   text-decoration: none;
   font-size: 17px;
-  color: #818181;
+  color: lightgray;
   display: block;
 }
 .bottomBar{
   overflow: hidden;
-  background-color: #333;
+  background-color: #4d5755;
   position: fixed;
   bottom: 0;
   left: 18em;
@@ -95,11 +95,7 @@ span{
   -webkit-transform: scale(1.3);
   transform: scale(1.3); 
 }
-.Emoji{
-  height: 1.4em;
-  width: 1.4em;
-  margin: 0 2em;
-}
+
 textarea{
   /* text-align: right; */
   border-radius: 0.4em;
@@ -137,3 +133,8 @@ h3{
 .Title{
   font-size: 1.3em;
 }
+/* @media (max-width: 425px) {
+  #sidenav {
+      display: none;
+  }
+} */
