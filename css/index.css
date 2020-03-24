@@ -1,0 +1,83 @@
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+input{
+border-radius: 2em;
+height: 1.4em;
+margin: 0.4em 0;
+width: 40%;
+}
+.sidenav {
+  height: 100%;
+  width: 18em;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  background-color: #111;
+  overflow: hidden;
+}
+.sidenav a {
+  padding: 0 2em;
+  text-decoration: none;
+  font-size: 17px;
+  color: #818181;
+  display: block;
+}
+.bottomBar{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.UserIcon{
+  height: 1.4em;
+  width: 1.4em;
+  margin: 0 1em;
+}
+.UserName{
+  display: inline;
+}
+.SideNavIcons{
+  height: 1em;
+  width: 1em;
+  margin: 0 1em;
+}
+.Line{
+  background-color: white;
+  height: 1px;
+}
+.SystemSetting{
+  position: fixed;
+  bottom: 0;
+}
+.zoom {
+  transition: transform .2s;
+  margin: 0 auto;
+}
+.zoom:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); 
+}
+.Emoji{
+  height: 1.4em;
+  width: 1.4em;
+  margin: 0 2em;
+}
+textarea{
+  /* text-align: right; */
+  border-radius: 0.4em;
+}
