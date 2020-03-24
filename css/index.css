@@ -19,6 +19,7 @@ span{
   height: 1.4em;
   margin: .7em 0;
   width: 40%;
+  padding: .2em .5em;
 }
 .spaced-flex{
   display: flex;
@@ -61,9 +62,20 @@ span{
   left: 18em;
   width: 80%;
   text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 .sidenav a:hover {
   color: #f1f1f1;
+}
+.message-options{
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+.message-options span{
+  padding: .5em 0;
 }
 .UserIcon{
   height: 1.4em;
@@ -83,8 +95,10 @@ span{
   height: 1px;
 }
 .SystemSetting{
-  position: fixed;
+  position: absolute;
+  width: 90%;
   bottom: 0;
+  margin-bottom: 1em;
 }
 .zoom {
   transition: transform .2s;
@@ -112,6 +126,12 @@ textarea{
   box-sizing: border-box;
   margin: 1em;
 }
+.chat-time{
+  font-size: .8em;
+  opacity: 70%;
+  text-align: right;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .mychat-box{
   background-color: wheat;
   /* margin-left: 4em; */
@@ -121,8 +141,9 @@ textarea{
   background-color: thistle;
 }
 h3{
-  font-size: 1.17em;
+  font-size: 1.2em;
   margin-bottom: 0.3em;
+  text-align: center;
 }
 .logo{
   height: 2.5em;
@@ -140,7 +161,7 @@ h3{
   .sidenav {
     margin: 2.7em 0;
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
   }
   .chat-section{
     display: none;
