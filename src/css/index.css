@@ -134,10 +134,10 @@ span{
   }
   .mychat-box{
     background-color: wheat;
-    /* margin-left: 4em; */
     justify-self: right;
   }
   .others-chat-box{
+    justify-self: left;
     background-color: thistle;
   }
   h3{

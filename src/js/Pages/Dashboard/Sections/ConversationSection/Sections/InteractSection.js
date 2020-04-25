@@ -1,10 +1,15 @@
-import React from "react";
-import IconButton from "../components/IconButton";
+import React,{useState} from "react";
+import IconButton from "components/IconButton";
 
 const InteractSection = () => {
+
+    const [textValue, changeTextValue] = useState('');
+
     return (
         <div className="bottomBar">
-            <textarea name="" id="" cols="50" rows="2"></textarea>
+            <textarea name="" id="" cols="50" rows="2" 
+                onChange={e=> changeTextValue(e.target.value)}>
+            </textarea>
             <div className="message-options">
                 <IconButton icon="send"></IconButton>
                 <IconButton icon="attachment"></IconButton>
