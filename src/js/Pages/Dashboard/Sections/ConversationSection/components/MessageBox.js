@@ -1,13 +1,14 @@
 import React from "react";
 
 const applyStyle = (senderID) => {
-
+    
     let boxClass = senderID > 0 ? "others-chat-box" : "mychat-box";
     
     return boxClass;
 }
 
 const MessageBox = ({message, time, senderID}) => {
+    
     
     return (
         <>  

@@ -1,15 +1,16 @@
 import React, {useState} from "react";
 
-const ContactButton = ({name, dpUrl}) => {
-
+const ContactButton = ({id, name, dpUrl}) => {
+    const [contactId, getID] = useState(id);
+    
     return (
         <>
-            <a href="#">
+            <button type="button" onClick = {e=>console.log(id)}>
                 <div className="spaced-flex">
                 <span className="material-icons">account_circle</span>
                 <span>{name}</span>
                 </div>
-            </a>
+            </button>
         </>
     )
 }
