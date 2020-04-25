@@ -28,7 +28,11 @@ span{
   }
   .conversations-nav{
     display: grid;
-    gap: .5em;
+    gap: 0.8em;
+    border-top: outset;
+    border-bottom: outset;
+    margin: 0.2em 1em;
+    padding: 0.4em;
   }
   .sidenav-main{
     display: grid;
