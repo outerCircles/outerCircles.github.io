@@ -159,9 +159,7 @@ span{
   }
   @media(max-width:425px) {
     .sidenav {
-      margin: 2.7em 0;
       width: 100%;
-      /* text-align: center; */
     }
     .chat-section{
       display: none;
