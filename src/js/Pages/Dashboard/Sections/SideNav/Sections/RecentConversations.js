@@ -4,7 +4,7 @@ import {getRecentContacts} from "components/../Store";
 
 const RecentConversations = () =>{
     
-    const recentContacts = getRecentContacts().map(({id, name, dpUrl}, index) => <ContactButton key={index} id={id} name = {name} dpUrl = {dpUrl}/>);
+    const recentContacts = getRecentContacts().map(({id, name, dpUrl}, index) => <ContactButton key={index} id = {id} name = {name} dpUrl = {dpUrl}/>);
 
     return (
         <section>
