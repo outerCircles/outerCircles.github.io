@@ -1,26 +1,26 @@
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import MessageBox from "../components/MessageBox";
 
-import {context} from "../../../../../Store";
-   
-const ChatSection =  () => {
+import {context, contactsDB} from "components/../Store";
 
-    // Use context
-    const [allChats] = useContext(context);
-    const contacts = Object.keys(allChats);
-    const activeChat = contacts[0];
+const ChatSection =  () => {
     
+    // Use context
+    const {storeObj, dispatch} = useContext(context);
+    const {activeChatID, allMessages} = storeObj;
+    const chatMessages = allMessages[activeChatID];
+    const activeChatTitle = contactsDB[activeChatID].name;
     return (
         <div className="chat-section">
             <div className="searchbar">
                 <input className="input" type="text" placeholder="Search"/>
             </div>
             <div>
-                <h2>{"ABC"}</h2>
+                <h2>{activeChatTitle}</h2>
             </div>
             <div>
             {   
-                allChats[activeChat].map(({message, time, senderID}, index) => {
+                chatMessages.map(({message, time, senderID}, index) => {
                     return <MessageBox key={index} message={message} time={time} senderID={senderID} />
                 })
                 

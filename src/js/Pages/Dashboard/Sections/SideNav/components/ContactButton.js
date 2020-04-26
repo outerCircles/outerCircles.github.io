@@ -1,11 +1,14 @@
-import React, {useState} from "react";
-
+import React, {useContext, useState, useCallback} from "react";
+import {context} from "components/../Store";
+import ChatSection from "../../ConversationSection/Sections/ChatSection";
 const ContactButton = ({id, name, dpUrl}) => {
-    const [contactId, getID] = useState(id);
-    
+    const {dispatch} = useContext(context);
+    // console.log(id);
+    // onClick={e=>switchConversation(reducerHook, id)}
+    // onClick={e=>ChatSection.loadNewChat(id)
     return (
         <>
-            <button type="button" onClick = {e=>console.log(id)}>
+            <button type="button" onClick={e=>dispatch({type:'SWITCH', payload:{newId:id}})}>
                 <div className="spaced-flex">
                 <span className="material-icons">account_circle</span>
                 <span>{name}</span>
