@@ -1,15 +1,16 @@
 import React, {useState} from "react";
+import {Link} from "react-router-dom";
 
-const ActionButton = ({name, icon}) => {
+const ActionButton = ({to, name, icon}) => {
 
     return (
         <>
-            <a href="#">
+            <Link to={`/${to}`}>
                 <div className="spaced-flex">
-                <span>{name}</span>
-                <span className="material-icons">{icon}</span>
+                    <span>{name}</span>
+                    <span className="material-icons">{icon}</span>
                 </div>
-            </a>
+            </Link>
         </>
     )
 }

@@ -4,8 +4,8 @@ import ActionButton from "components/ActionButton";
 const SettingsSection = () =>{
     return (
         <div className="SystemSetting">
-            <ActionButton name="Settings" icon="settings" />
-            <ActionButton name="About" icon="info"/>
+            <ActionButton to="settings" name="Settings" icon="settings" />
+            <ActionButton to="about" name="About" icon="info"/>
         </div>
     )
 }
