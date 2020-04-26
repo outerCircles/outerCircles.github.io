@@ -9,7 +9,7 @@ const ContactButton = ({id, name, dpUrl}) => {
     return (
         <>
             <button type="button" onClick={e=>dispatch({type:'SWITCH', payload:{newId:id}})}>
-                <div className="spaced-flex">
+                <div className="spaced-flex" className="mainUser">
                 <span className="material-icons">account_circle</span>
                 <span>{name}</span>
                 </div>
