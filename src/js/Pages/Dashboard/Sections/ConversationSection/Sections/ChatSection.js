@@ -1,4 +1,4 @@
-import React,{useContext, useState} from "react";
+import React,{useContext, useRef, useEffect} from "react";
 import MessageBox from "../components/MessageBox";
 
 import {context, contactsDB} from "components/../Store";
@@ -11,6 +11,15 @@ const ChatSection =  () => {
     const chatMessages = allMessages[activeChatID];
     const activeChatTitle = contactsDB[activeChatID].name;
     
+    // referred from https://stackoverflow.com/questions/37620694/how-to-scroll-to-bottom-in-react
+    const messagesEndRef = useRef(null)
+
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+
+    useEffect(scrollToBottom, [chatMessages]);
+
     return (
         <div className="chat-section">
             <div className="searchbar">
@@ -20,13 +29,14 @@ const ChatSection =  () => {
                 <h2 className="chat-title">{activeChatTitle}</h2>
             </div>
             <div>
-            {   
-                chatMessages.map(({message, time, senderID}, index) => {
-                    return <MessageBox key={index} message={message} time={time} senderID={senderID} />
-                })
-                
-            }
+                {   
+                    chatMessages.map(({message, time, senderID}, index) => 
+                        <MessageBox key={index} message={message} time={time} senderID={senderID} />
+                    )
+                }
+                 <div ref={messagesEndRef} />
             </div>
+           
         </div>
     )
 }
