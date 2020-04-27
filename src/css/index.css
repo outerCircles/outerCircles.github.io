@@ -8,9 +8,6 @@ span{
   padding: 0 5%;
   width: 16em;
 }
-/* .userIcon{
-  font-size: 2em;
-} */
 .searchbar {
   overflow: hidden;
   background-color: #4d5755;
@@ -215,6 +212,43 @@ h3{
   padding: 0.2em;
   color: white;
 }
+.about{
+  margin: 5% 25%;
+  text-align: center;
+}
+.about h4{
+  padding: 0.3em 0;
+}
+
+#AboutTab {
+  /* display: none; */
+  padding: 2% 5%;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 20px;
+  border-radius: 0.4em;
+}
+.aboutImg{
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+}
+.aboutTile{
+  border-bottom: 1px solid white;
+  color: white;
+  display: block;
+  font-size: 1.4em;
+  padding: 1em 30%;
+}
+#AboutTab a{
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px){
+  .aboutTile{
+    padding: 1em 20%;
+  }
+}
 @media(max-width:425px) {
   .sidenav {
     margin: 2.7em 0;
@@ -258,6 +292,15 @@ h3{
   .settingsMain{
     width: 90%;
     margin: 10% 1.27%;
+  }
+  .aboutTile{
+    padding: 1em 2%;
+  }
+  #AboutTab {
+    width: 100%;
+  }
+  .about{
+    margin: 5% 15%;
   }
 }
   
