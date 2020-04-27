@@ -1,10 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Settings = () => {
     return (
         <>
         <header class="settingsHeader">
-            <span class="material-icons homeIconHeader">home</span>
+            <Link to="" ><span class="material-icons homeIconHeader">home</span></Link>
         </header>
         <main main class="settingsMain">
         <h1>Settings</h1>
