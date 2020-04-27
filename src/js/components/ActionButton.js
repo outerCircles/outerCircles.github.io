@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 
 const ActionButton = ({to, name, icon}) => {
-
+    to = to==null?'':to;
     return (
         <>
             <Link to={`/${to}`}>
