@@ -2,7 +2,7 @@ import React from "react";
 
 const IconButton = ({icon, action}) => {
     return (
-        <button type="button" className="material-icons" onClick={action}>{icon}</button>
+        <button type="button" className="icon-button" onClick={action}><span className="material-icons">{icon}</span></button>
     )
 }
 

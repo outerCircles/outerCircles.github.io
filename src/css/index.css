@@ -157,6 +157,9 @@ textarea{
   box-sizing: border-box;
   margin: 1em;
 }
+.chat-title{
+  font-size: 1.3em;
+}
 .chat-time{
   font-size: .8em;
   opacity: 70%;
@@ -259,6 +262,11 @@ h3{
   height: 4em;
   width: 4em;
   border-radius: 2em;
+}
+.icon-button{
+  background-color:grey;
+  padding: 0 1em;
+  color: whitesmoke;
 }
 .aboutTile{
   border-bottom: 1px solid white;

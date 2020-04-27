@@ -1,8 +1,11 @@
 import React, {createContext, useReducer} from 'react';
 import io from "socket.io-client";
+import moment from "moment";
 const endPoint = 'https://outercircles.herokuapp.com/';
 
 export const context = createContext();
+
+export const myID = Date.now();
 
 const initialState = {
     activeChatID : 0,
@@ -27,16 +30,17 @@ export const getRecentContacts = () => {
     return recentContacts;
 }
 
+const getCurrentTime = () => {
+    const now = moment();
+    return now.format("hh:mm a") ;
+}
+
 const getRecentMessages = contactID => {
     const msgs = {
-        0: [{message: "Hey", senderID: 0, time:"10:30" },
-            {message: "hello", senderID: 1, time:"10:30" }],
-        1: [{message: "Bey", senderID: 0, time:"10:30" },
-            {message: "Bello", senderID: 1, time:"10:30" }],
-        2: [{message: "Hey3", senderID: 0, time:"10:30" },
-            {message: "hello3", senderID: 1, time:"10:30" }],
-        3: [{message: "Bey4", senderID: 0, time:"10:30" },
-            {message: "Bello4", senderID: 1, time:"10:30" }]
+        0: [{message: "Hey, lets chat here !!", senderID: 0, time:getCurrentTime() }],
+        1: [{message: "Hey, lets chat here !!", senderID: 0, time:getCurrentTime()}],
+        2: [{message: "Hey, lets chat here !!", senderID: 0, time:getCurrentTime()}],
+        3: [{message: "Hey, lets chat here !!", senderID: 0, time:getCurrentTime() }]
     }
     return msgs[contactID];
 }
@@ -49,7 +53,7 @@ const setUpInitialState = () => {
 }
 
 const reducer = (state, action) => {
-    const {sender, receiver, msg} = action.payload;
+    const {sender, receiver, msg, time} = action.payload;
     switch(action.type){
         case 'RECEIVE':
             return {
@@ -58,7 +62,7 @@ const reducer = (state, action) => {
                     ...state.allMessages,
                     [receiver]: [
                             ...state['allMessages'][receiver],
-                            {message: msg, senderID: sender, time:"10:30" }
+                            {message: msg, senderID: sender, time:time }
                     ]
                 }
                 
@@ -81,11 +85,11 @@ const reducer = (state, action) => {
 let socket;
 
 const sendChatMessage = (message, to) => {
-
     socket.emit('new message', {
         msg : message,
-        sender : 3,
-        receiver : parseInt(to)
+        sender : myID,
+        receiver : parseInt(to),
+        time: getCurrentTime()
     });
 }
 
@@ -98,9 +102,9 @@ const Store = (props) => {
         socket = io(endPoint);
 
         socket.on('new message', (message) => {
-            const {msg, sender, receiver} = message;
+            const {msg, sender, receiver, time} = message;
             // Send Message
-            dispatch({type:'RECEIVE', payload:{sender:sender, receiver:receiver, msg:msg}});
+            dispatch({type:'RECEIVE', payload:{sender:sender, receiver:receiver, msg:msg, time:time}});
         });
     }
 
