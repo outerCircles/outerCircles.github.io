@@ -8,6 +8,13 @@ span{
   padding: 0 5%;
   width: 16em;
 }
+button{
+  border-radius: 5px;
+  background-color: #946060;
+  opacity: .7;
+  border: none;
+  color: gainsboro;
+}
 .searchbar {
   overflow: hidden;
   background-color: #4d5755;
@@ -80,6 +87,9 @@ span{
 }
 .message-options span{
   padding: .5em 0;
+}
+.userButton{
+  padding: 0.2em 0.8em;
 }
 .UserIcon{
   height: 1.4em;
