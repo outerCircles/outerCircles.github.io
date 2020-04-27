@@ -9,9 +9,11 @@ const InteractSection = () => {
     const [textValue, changeTextValue] = useState('');
 
     const sendMessage = () => {
-        sendChatMessage(textValue, activeChatID);
-        //Reset Text
-        changeTextValue('');
+        if(textValue != ''){
+            sendChatMessage(textValue, activeChatID);
+            //Reset Text
+            changeTextValue('');
+        }
     }
     return (
         <div className="bottomBar">

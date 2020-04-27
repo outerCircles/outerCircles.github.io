@@ -17,7 +17,7 @@ const ChatSection =  () => {
                 <input className="input" type="text" placeholder="Search"/>
             </div>
             <div>
-                <h2>{activeChatTitle}</h2>
+                <h2 className="chat-title">{activeChatTitle}</h2>
             </div>
             <div>
             {   

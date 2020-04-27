@@ -1,8 +1,9 @@
 import React from "react";
+import {myID} from "components/../Store";
 
 const applyStyle = (senderID) => {
     
-    let boxClass = senderID > 0 ? "others-chat-box" : "mychat-box";
+    let boxClass = senderID != myID ? "others-chat-box" : "mychat-box";
     
     return boxClass;
 }
