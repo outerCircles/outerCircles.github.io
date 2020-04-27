@@ -15,7 +15,7 @@ const InteractSection = () => {
     }
     return (
         <div className="bottomBar">
-            <textarea placeholder="send message" id="" cols="50" rows="2" value = {textValue}
+            <textarea placeholder="Type Something" id="" cols="50" rows="2" value = {textValue}
                 onChange={e=> changeTextValue(e.target.value)}>
             </textarea>
             <div className="message-options">
