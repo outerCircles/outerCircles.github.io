@@ -128,6 +128,8 @@ textarea{
   /* text-align: right; */
   border-radius: 0.4em;
   margin: 0.4em;
+  padding: 0.2em;
+  height: 2em;
 }
 .chat-section{
   padding: 3em 0;

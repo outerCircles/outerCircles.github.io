@@ -8,7 +8,7 @@ const InteractSection = () => {
     return (
         <div className="bottomBar">
             <textarea name="" id="" cols="50" rows="2" 
-                onChange={e=> changeTextValue(e.target.value)}>
+                onChange={e=> changeTextValue(e.target.value)} placeholder="Type Something">
             </textarea>
             <div className="message-options">
                 <IconButton icon="send"></IconButton>
