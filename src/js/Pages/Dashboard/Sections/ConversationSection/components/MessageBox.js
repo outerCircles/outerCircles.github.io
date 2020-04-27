@@ -9,7 +9,6 @@ const applyStyle = (senderID) => {
 
 const MessageBox = ({message, time, senderID}) => {
     
-    
     return (
         <>  
             <div className={`chat-box ${applyStyle(senderID)}`}>

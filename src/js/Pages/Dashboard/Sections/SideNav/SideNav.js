@@ -13,7 +13,7 @@ const SideNav = () => {
                     <img src={logo} alt="Logo" className="logo"/>
                     <span>Outer Circle</span>
                 </div>
-                <ContactButton name="Kunal Dhawan" dpUrl=""/>
+                <ContactButton name="My Profile" dpUrl=""/>
             </header>
             <main className="sidenav-main">
                 <StarredSection />

@@ -6,10 +6,11 @@ import {context, contactsDB} from "components/../Store";
 const ChatSection =  () => {
     
     // Use context
-    const {storeObj, dispatch} = useContext(context);
+    const {storeObj} = useContext(context);
     const {activeChatID, allMessages} = storeObj;
     const chatMessages = allMessages[activeChatID];
     const activeChatTitle = contactsDB[activeChatID].name;
+    
     return (
         <div className="chat-section">
             <div className="searchbar">

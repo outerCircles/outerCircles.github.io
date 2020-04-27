@@ -1,5 +1,6 @@
-import React, {createContext, useReducer, useState} from 'react';
-import ContactButton from './Pages/Dashboard/Sections/SideNav/components/ContactButton';
+import React, {createContext, useReducer} from 'react';
+import io from "socket.io-client";
+const endPoint = 'https://outercircles.herokuapp.com/';
 
 export const context = createContext();
 
@@ -48,19 +49,21 @@ const setUpInitialState = () => {
 }
 
 const reducer = (state, action) => {
-    const {sender, msg, id} = action.payload;
+    const {sender, receiver, msg} = action.payload;
     switch(action.type){
-        case 'RECEIVE': 
-            return{
-                ...state.allMessages,
-                [id]: [
-                    ...state.allMessages[id],
-                    {
-                        from: sender,
-                        msg: msg
-                    }
-                ]
+        case 'RECEIVE':
+            return {
+                ...state,
+                ['allMessages']: {
+                    ...state.allMessages,
+                    [receiver]: [
+                            ...state['allMessages'][receiver],
+                            {message: msg, senderID: sender, time:"10:30" }
+                    ]
+                }
+                
             }
+
         case 'SWITCH':
             
             const id = action.payload.newId;
@@ -75,12 +78,34 @@ const reducer = (state, action) => {
     }
 }
 
+let socket;
+
+const sendChatMessage = (message, to) => {
+
+    socket.emit('new message', {
+        msg : message,
+        sender : 3,
+        receiver : parseInt(to)
+    });
+}
+
 const Store = (props) => {
+    
     setUpInitialState();
     const [storeObj, dispatch] = useReducer(reducer, initialState);
-    
+
+    if(!socket){
+        socket = io(endPoint);
+
+        socket.on('new message', (message) => {
+            const {msg, sender, receiver} = message;
+            // Send Message
+            dispatch({type:'RECEIVE', payload:{sender:sender, receiver:receiver, msg:msg}});
+        });
+    }
+
     return (
-        <context.Provider value={{storeObj, dispatch}}>
+        <context.Provider value={{storeObj, dispatch, sendChatMessage}}>
             {props.children}
         </context.Provider>
     )
