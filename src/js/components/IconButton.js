@@ -1,8 +1,8 @@
 import React from "react";
 
-const IconButton = ({icon}) => {
+const IconButton = ({icon, action}) => {
     return (
-        <span className="material-icons">{icon}</span>
+        <button type="button" className="material-icons" onClick={action}>{icon}</button>
     )
 }
 
