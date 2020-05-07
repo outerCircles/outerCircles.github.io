@@ -1,4 +1,3 @@
-# ✅ READY TO GRADE
 # outerCircles.github.io
 App is live at - https://outercircles.netlify.app
 
