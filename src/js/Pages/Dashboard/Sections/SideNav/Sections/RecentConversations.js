@@ -8,7 +8,7 @@ const RecentConversations = () =>{
 
     return (
         <section>
-            <h3>Recent Chats</h3>
+            <h3>Channels</h3>
             <div className="conversations-nav">
                 {recentContacts}
             </div>

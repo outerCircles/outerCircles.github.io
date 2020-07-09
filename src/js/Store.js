@@ -13,10 +13,10 @@ const initialState = {
 }
 
 export const contactsDB = {
-    0:{name: "Kunal Dhawan", dpUrl: ""},
-    1:{name: "Reynaldo Sia", dpUrl: ""},
-    2:{name: "Jorge William", dpUrl: ""},
-    3:{name: "Robin Bedford", dpUrl: ""}
+    0:{name: "Overwatch", dpUrl: ""},
+    1:{name: "CS Go", dpUrl: ""},
+    2:{name: "Volarant", dpUrl: ""},
+    3:{name: "Call of Duty", dpUrl: ""}
 }
 export const getRecentContacts = () => {
     const recentContacts = Object.keys(contactsDB).map(contactID=> {
